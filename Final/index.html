@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>昆霖的大學生活</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            /*文字的項目符號去除*/
+            list-style: none;
+            /*文字的底線去除*/
+        }
+        
+        nav {
+            width: 100%;
+            /*導覽列寬*/
+            height: 120px;
+            /*導覽列高*/
+            background: rgb(30, 30, 30);
+            font-family: Comic Sans MS;
+            position: fixed;
+        }
+        
+        nav ul {
+            float: right;
+            /*顯示在右邊*/
+            margin-right: 20px;
+            /*距離右邊邊界20px*/
+        }
+        
+        nav ul li {
+            display: inline-block;
+            /*水平顯示標籤*/
+            line-height: 100px;
+            /*100*/
+            /*距離頂端80px*/
+            margin: 0px 30px;
+            /*margin 上   下   左  右
+                    0px  30px 0px 30px*/
+        }
+        
+        nav ul li a {
+            color: rgb(255, 255, 255);
+            font-size: 25px;
+        }
+        
+        nav ul li a:hover {
+            /*滑鼠指到nav ul li a上方時，會執行以下動作*/
+            background-color: coral;
+            border-radius: 3px;
+        }
+        
+        label.logo {
+            color: rgb(255, 255, 255);
+            font-size: 55px;
+            line-height: 105px;
+            /*80*/
+            padding: 50px;
+        }
+        
+        .xxx {
+            margin: 0px 30px 0px 0px;
+            /*上 下 左右*/
+            line-height: 80px;
+            display: inline-block;
+            width: "auto";
+            height: 60px;
+            margin-right: 20px;
+            vertical-align: top;
+        }
+        
+        textarea {
+            background-color: rgb(247, 124, 23);
+            font-weight: bolder;
+            font-size: 20px;
+            margin-left: 70%;
+        }
+        
+        #npustmis {
+            /*50*/
+            padding-left: 50px;
+            padding-bottom: 100px;
+        }
+        
+        .cum {
+            font-family: Comic Sans MS;
+        }
+        
+        label.oran {
+            background-color: rgb(247, 124, 23);
+            color: black;
+            border-radius: 3px;
+        }
+        
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
+            background-color: rgb(30, 30, 30);
+            color: white;
+            text-align: center;
+        }
+        
+        @media(max-width:500px) {
+            nav ul li {
+                /*display: block;*/
+                line-height: 100px;
+                /*原本是100*/
+                text-align: center;
+                width: 100%;
+            }
+            .words {
+                font-size: 80px;
+                color: cyan;
+                letter-spacing: 10px;
+                position: absolute;
+                top: 50%;
+                left: 30%;
+            }
+            .imgw {
+                position: relative;
+            }
+            .swordhead {
+                width: 50px;
+            }
+            .back-to-top {
+                display: none;
+                /* 默認是隱藏的，這樣在第一屏才不顯示 */
+                position: fixed;
+                /* 位置是固定的 */
+                bottom: 20px;
+                /* 顯示在頁面底部20 */
+                right: 30px;
+                /* 顯示在頁面的右邊 30*/
+                z-index: 99;
+                /* 確保不被其他功能覆蓋 */
+                border: 0px solid #5cb85c;
+                /* 顯示邊框 */
+                outline: none;
+                /* 不顯示外框 */
+                background-color: #fff;
+                /* 設置背景背景顏色 */
+                color: #5cb85c;
+                /* 設置文本顏色 */
+                cursor: pointer;
+                /* 滑鼠移到按鈕上顯示手型 */
+                padding: 10px 15px 15px 15px;
+                /* 增加一些內邊距 */
+                border-radius: 15px;
+                /* 增加圓角 */
+            }
+            .back-to-top:hover {
+                background-color: #5cb85c;
+                /* 滑鼠移上去時，反轉顏色 */
+                color: #fff;
+            }
+        }
+    </style>
+
+
+
+</head>
+
+<body bgcolor="black">
+
+
+
+    <nav>
+        <div>
+            <label class="logo"><span style="font-family:monospace;"><a href="https://www.instagram.com/kunlinko/" style="color: white;">Npust</a><label class="oran"><B><a href="https://www.instagram.com/kunlinko/" style="color:black;">mis</a></B></oran></label></span>
+
+
+
+
+            <ul>
+                <li><a href="#">自我介紹</a></li>
+                <li><a href="#">大學活動</a></li>
+                <li><a href="#">系會成員</a></li>
+                <li><a href="#">測試</a></li>
+
+                <select name="" onchange="self.location.href=options[selectedIndex].value" style="font-size: 20px;">
+                <option selected="false" value="#">---相關連結---</option>
+                <option value="http://www.npust.edu.tw">屏東科技大學</option>
+                <option value="https://www.instagram.com/kunlinko/">Instagram</option>
+                <option value="https://www.facebook.com/profile.php?id=100000376376965">Facebook</option>
+                <option value="https://line.me/ti/p/7IprPYCtqk">Line</option>
+                </select>
+                <Input Type="Button" Value=" ↺ " onClick="window.location.reload();" style="font-size: 20px;">
+                <button class="js-back-to-top back-to-top" title="回到頭部"><Input Type="Button" Value=" ↟ " onClick="" style="font-size: 20px;"></button>
+
+                <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="imgw">
+        <h2>墾丁夜衝</h2>
+        <img src="1.jpg" alt="" width="100%">
+        <img src="2.jpg" alt="" width="100%">
+        <img src="3.jpg" alt="" width="100%">
+        <img src="4.jpg" alt="" width="100%">
+        <img src="5.jpg" alt="" width="100%">
+
+
+
+        <script>
+            $(function() {
+
+                var $win = $(window);
+
+                var $backToTop = $('.js-back-to-top');
+
+                // 當用戶滾動到離頂部100像素時，展示回到頂部按鈕
+
+                $win.scroll(function() {
+
+                    if ($win.scrollTop() > 100) {
+
+                        $backToTop.show();
+
+                    } else {
+
+                        $backToTop.hide();
+
+                    }
+
+                });
+
+                // 當用戶點擊按鈕時，通過動畫效果返回頭部
+
+                $backToTop.click(function() {
+
+                    $('html, body').animate({
+                        scrollTop: 0
+                    }, 200);
+
+                });
+
+            });
+        </script>
+
+
+
+        <div class="words ">我好可愛</div>
+    </div>
+
+    <span style="font-weight:bold;"></span><textarea cols="40" rows="4" style="color:white">
+ 輸入你想對我說的話...
+        </textarea></span>
+    <Input Type="Button" Value="送出" onClick="textarea.delete" style="font-size: 18px;background-color:rgb(247, 124, 23) ;color: black;">
+    <Input Type="Button" Value="清除" onClick="" style="font-size: 18px;color: black;background-color: rgb(247, 124, 23);">
+    <BR> </BR>
+
+    <div class="footer">
+        © copyright 2020 by KunLinko
+    </div>
+
+
+
+</body>
+
+</html>

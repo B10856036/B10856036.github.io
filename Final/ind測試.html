@@ -1,0 +1,93 @@
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <style>
+        .back-to-top {
+            display: none;
+            /* 默認是隱藏的，這樣在第一屏才不顯示 */
+            position: fixed;
+            /* 位置是固定的 */
+            bottom: 20px;
+            /* 顯示在頁面底部 */
+            right: 30px;
+            /* 顯示在頁面的右邊 */
+            z-index: 99;
+            /* 確保不被其他功能覆蓋 */
+            border: 1px solid #5cb85c;
+            /* 顯示邊框 */
+            outline: none;
+            /* 不顯示外框 */
+            background-color: #fff;
+            /* 設置背景背景顏色 */
+            color: #5cb85c;
+            /* 設置文本顏色 */
+            cursor: pointer;
+            /* 滑鼠移到按鈕上顯示手型 */
+            padding: 10px 15px 15px 15px;
+            /* 增加一些內邊距 */
+            border-radius: 10px;
+            /* 增加圓角 */
+        }
+        
+        .back-to-top:hover {
+            background-color: #5cb85c;
+            /* 滑鼠移上去時，反轉顏色 */
+            color: #fff;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <img src="自我介紹圖片.jpg" alt="" width="100%">
+    <img src="墾丁夜衝.jpg" alt="" width="100%">
+
+    <button class="js-back-to-top back-to-top" title="回到頭部">&#65085;</button>
+
+    <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+
+
+
+    <script>
+        $(function() {
+
+            var $win = $(window);
+
+            var $backToTop = $('.js-back-to-top');
+
+            // 當用戶滾動到離頂部100像素時，展示回到頂部按鈕
+
+            $win.scroll(function() {
+
+                if ($win.scrollTop() > 100) {
+
+                    $backToTop.show();
+
+                } else {
+
+                    $backToTop.hide();
+
+                }
+
+            });
+
+            // 當用戶點擊按鈕時，通過動畫效果返回頭部
+
+            $backToTop.click(function() {
+
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 200);
+
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
